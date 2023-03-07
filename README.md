@@ -3,11 +3,6 @@
 
 ## NeRF의 후속 연구
 
-4. Point-NeRF: Point-based Neural Radiance Fields
-Point-NeRF는 Original NeRF의 Training 속도가 매우 느리다는 점과 퀄리티를 개선한 모델로, 연속 Volume Radiance 공간을 모델링 하기 위해서 3D neural point cloud를 사용합니다.
-기존 NeRF가 ray를 기반으로 Sampling하여 모델을 학습하는 것과 다르게, Point-NeRF는 3D 공간 상에서 voxel point마다 feature와 confidence를 먼저 구성하고 그 구성을 기반으로 Sampling point와 neural point 간의 거리 정보를 통해 가중치를 구성하여 neural point confidence 값을 사용하여 volume density와 radiance를 계산합니다.
-
-
 1. Training, rendering 속도 개선 : Instant NeRF (SIGGRAPH 2022)
 ```
 문제점 : NeRF는 V100 GPU 에서 학습에 1일 이상 소요되고, Rendering 1장에 30초정도 소요됩니다. 실시간 Application 서비스를 할 수 없습니다.
